@@ -3,8 +3,8 @@
    All names, dates, venue details and links live in CONFIG.
    ========================================================== */
 const CONFIG = {
-  groom: { name: "Nikhil",  fullName: "Nikhil Kapil" },
-  bride: { name: "Ankita", fullName: "Ankita Mishra", parents: "(D/o Smt. Sudha & Kedar Nath Mishra of Gorakhpur)" },
+  groom: { name: "Nikhil",  fullName: "Nikhil" },
+  bride: { name: "Ankita", fullName: "Ankita", parents: "(D/o Smt. Sudha & Kedar Nath Mishra of Gorakhpur)" },
   couple: "Nikhil & Ankita",
   monogram: "N & A",
   hashtag: "#NikhilWedsAnkita",
