@@ -63,7 +63,7 @@ const CONFIG = {
   closing: {
     title: "Awaiting your gracious presence",
     text: "As two souls become one and two families unite, our joy will be complete only with you beside us — to fill the evening with your love, laughter & blessings.",
-    kids: "Special Invitation From Our Family Shining Stars: Advika and Kiara"
+    kids: "Special Invitation From Our Family Shining Stars: Aadvika, Kiara, Harsh, Masha and Pritha"
   },
 
   rsvp: {
