@@ -449,9 +449,9 @@ const CONFIG = {
           ctx.beginPath(); ctx.ellipse(0, 0, p.r, p.r * .5, 0, 0, 6.28); ctx.fill();
           ctx.restore();
         } else {
-          ctx.fillStyle = "rgba(246,229,168," + p.a * .25 + ")";
+          ctx.fillStyle = "rgba(176,138,62," + p.a * .3 + ")";
           ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 3, 0, 6.28); ctx.fill();
-          ctx.fillStyle = "rgba(255,244,208," + p.a + ")";
+          ctx.fillStyle = "rgba(255,255,255," + p.a + ")";
           ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.28); ctx.fill();
         }
       }
