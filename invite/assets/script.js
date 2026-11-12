@@ -37,12 +37,12 @@ const CONFIG = {
   },
 
   // icon: "jagran" | "cocktail" | "sehra" | "baraat" | "dinner" | "sangeet"
-  eventsEyebrow: "2nd – 6th December 2026",
+  eventsEyebrow: "1st – 6th December 2026",
   eventsTitle: "Golden Moments",
   events: [
-    { date: "Wed, 2nd Dec 2026", title: "Haldi",     place: "At Residence",          icon: "jagran" },
-    { date: "Wed, 2nd Dec 2026", title: "Sangeet",   place: "At Residence",          icon: "sangeet" },
-    { date: "3rd Dec 2026",      title: "Wedding",   place: "Nepal Club, Gorakhpur", icon: "sehra" },
+    { date: "Tue, 1st Dec 2026", title: "Haldi",     place: "At Residence",          icon: "jagran" },
+    { date: "Tue, 1st Dec 2026", title: "Sangeet",   place: "At Residence",          icon: "sangeet" },
+    { date: "3rd Dec 2026",      title: "Wedding",   place: "Nipal Lawns, Gorakhpur", icon: "sehra" },
     { date: "6th Dec 2026",      title: "Reception", place: "Chandigarh",            icon: "dinner" }
   ],
 
@@ -57,7 +57,7 @@ const CONFIG = {
   calendar: {
     title: "Nikhil weds Ankita — Wedding Ceremony",
     details: "Wedding ceremony of Nikhil Kapil with Ankita Mishra.",
-    location: "Nepal Club, Gorakhpur"
+    location: "Nipal Lawns, Gorakhpur"
   },
 
   closing: {
