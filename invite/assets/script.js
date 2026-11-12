@@ -463,7 +463,7 @@ const CONFIG = {
   /* ---------- slideshow autoplay ---------- */
   // ponytail: one fixed pace for every slide; per-slide timings if some need longer
   function initAutoplay() {
-    const STEP = 6000, PAUSE_AFTER_TOUCH = 12000;
+    const STEP = 2000, PAUSE_AFTER_TOUCH = 12000;
     const slides = $$(".hero, .sec, .footer");
     let timer;
     const schedule = ms => { clearTimeout(timer); timer = setTimeout(next, ms); };
