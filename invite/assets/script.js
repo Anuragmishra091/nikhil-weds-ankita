@@ -219,6 +219,7 @@ const CONFIG = {
       document.body.classList.add("opened");
       window.scrollTo(0, 0);
       initScratch();                    // size the canvas now that layout is final
+      initAutoplay();
       setTimeout(() => { intro.remove(); }, 1100);
     }, t);
   }
@@ -457,6 +458,33 @@ const CONFIG = {
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
+  }
+
+  /* ---------- slideshow autoplay ---------- */
+  // ponytail: one fixed pace for every slide; per-slide timings if some need longer
+  function initAutoplay() {
+    const STEP = 6000, PAUSE_AFTER_TOUCH = 12000;
+    const slides = $$(".hero, .sec, .footer");
+    let timer;
+    const schedule = ms => { clearTimeout(timer); timer = setTimeout(next, ms); };
+    function next() {
+      const y = scrollY, vh = innerHeight;
+      const target = slides.map(s => s.getBoundingClientRect().top + y).find(t => t > y + 4);
+      if (target === undefined) {                       // last slide: page down, then stop
+        if (y + vh < document.documentElement.scrollHeight - 4) {
+          scrollTo({ top: y + vh * 0.85, behavior: "smooth" });
+          schedule(STEP);
+        }
+        return;
+      }
+      // a slide taller than the screen (event list) is paged through before moving on
+      const tall = target - y > vh + 8;                 // unseen part of this slide still below the screen
+      scrollTo({ top: tall ? Math.min(y + vh * 0.85, target - vh) : target, behavior: "smooth" });
+      schedule(STEP);
+    }
+    ["touchstart", "wheel", "keydown", "pointerdown"].forEach(ev =>
+      addEventListener(ev, () => schedule(PAUSE_AFTER_TOUCH), { passive: true }));
+    schedule(STEP);
   }
 
   /* ---------- boot ---------- */

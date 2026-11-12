@@ -596,6 +596,17 @@ a { color: inherit; }
 }
 
 /* ==========================================================
+   SLIDESHOW: every section is a full-screen slide
+   ========================================================== */
+html { scroll-snap-type: y proximity; }
+.hero, .sec, .footer { scroll-snap-align: start; }
+.sec, .footer {
+  min-height: 100vh; min-height: 100svh;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.sec > .btn { align-self: center; }
+
+/* ==========================================================
    REDUCED MOTION
    ========================================================== */
 @media (prefers-reduced-motion: reduce) {
